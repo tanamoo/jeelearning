@@ -28,6 +28,28 @@
 <param-name>pass</param-name>
 <param-value></param-value>
 </context-param>
+
+<servlet>
+<!-- 指定Servlet名字 -->
+<servlet-name>config</servlet-name>
+<!-- 指定将哪个jsp页面配置成Servlet，路径相对于项目根目录 -->
+<jsp-file>/02/2.9/jspObject/configTest2.jsp</jsp-file>
+<!-- 配置名为name的参数，值为tanamo -->
+<init-param>
+<param-name>name</param-name>
+<param-value>tanamo</param-value>
+</init-param>
+<!-- 配置名为age的参数，值为23 -->
+<init-param>
+<param-name>age</param-name>
+<param-value>23</param-value>
+</init-param>
+</servlet>
+<!-- 指定将config Servlet配置到/config路径 -->
+<servlet-mapping>
+<servlet-name>config</servlet-name>
+<url-pattern>/02/2.9/jspObject/config</url-pattern>
+</servlet-mapping>
     
 </web-app>
 
