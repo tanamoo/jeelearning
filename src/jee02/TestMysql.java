@@ -26,7 +26,7 @@ public static void main(String[] args){
 		ResultSet rs=null;
 		String url="jdbc:mysql://localhost:3306/test";
 		String user="root";
-		String password="";
+		String password="yu328ting8MYS";
 		String sql=null;
 		
 		//3.创建数据库连接

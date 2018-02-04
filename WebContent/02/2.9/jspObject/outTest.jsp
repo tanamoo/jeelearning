@@ -12,7 +12,7 @@
 		//注册数据库驱动
 		Class.forName("com.mysql.jdbc.Driver");
 		//获取数据库连接
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "roor", "");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "yu328ting8MYS");
 		//创建statement对象
 		Statement stmt = conn.createStatement();
 		//执行查询，获取ResultSet对象
