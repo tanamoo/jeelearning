@@ -14,7 +14,7 @@ public class FirstServlet extends HttpServlet {
 	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
 		// 设置编码方式
-		request.setCharacterEncoding("GBK");
+		request.setCharacterEncoding("utf-8");
 		// 获取name的请求参数
 		String name = request.getParameter("name");
 		// 获取gender的请求参数

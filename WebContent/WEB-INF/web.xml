@@ -64,7 +64,53 @@
 		<!-- 指定Servlet的名字 -->
 		<servlet-name>firstServlet</servlet-name>
 		<!-- 指定Servlet映射的URL地址 -->
-		<url-pattern>/firstServlet</url-pattern>
+		<url-pattern>/02/2.10/ServletDemo/firstServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 为TimerServlet配置 -->
+	<servlet>
+	<!-- Servlet名 -->
+	<servlet-name>timeServlet</servlet-name>
+	<!-- Servlet实现类 -->
+	<servlet-class>jee02Servlet.TimerServlet</servlet-class>
+	<!-- 配置应用启动时，创建Servlet实例 -->
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- 为TestServlet配置 -->
+	<servlet>
+	<servlet-name>testServlet</servlet-name>
+	<servlet-class>jee02Servlet.TestServlet</servlet-class>
+	<init-param>
+	<param-name>driver</param-name>
+	<param-value>com.mysql.jdbc.Driver</param-value>
+	</init-param>
+	<init-param>
+	<param-name>url</param-name>
+	<param-value>jdbc:mysql://localhost:3306/test</param-value>
+	</init-param>
+	<init-param>
+	<param-name>user</param-name>
+	<param-value>root</param-value>
+	</init-param>
+	<init-param>
+	<param-name>pass</param-name>
+	<param-value>yu328ting8MYS</param-value>
+	</init-param>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>testServlet</servlet-name>
+	<url-pattern>/02/2.10/ServletDemo/testServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 为LoginServlet配置 -->
+	<servlet>
+	<servlet-name>login</servlet-name>
+	<servlet-class>jee02Servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>login</servlet-name>
+	<url-pattern>/02/2.10/ServletDemo/login</url-pattern>
 	</servlet-mapping>
 
 </web-app>
