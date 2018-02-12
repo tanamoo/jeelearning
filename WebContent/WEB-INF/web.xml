@@ -66,16 +66,17 @@
 		<!-- 指定Servlet映射的URL地址 -->
 		<url-pattern>/02/2.10/ServletDemo/firstServlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- 为TimerServlet配置 -->
-	<servlet>
+	<!-- <servlet>-->
 	<!-- Servlet名 -->
-	<servlet-name>timeServlet</servlet-name>
+	<!--  <servlet-name>timeServlet</servlet-name> -->
 	<!-- Servlet实现类 -->
-	<servlet-class>jee02Servlet.TimerServlet</servlet-class>
+	<!-- <servlet-class>jee02Servlet.TimerServlet</servlet-class> -->
 	<!-- 配置应用启动时，创建Servlet实例 -->
-	<load-on-startup>1</load-on-startup>
-	</servlet>
+	<!-- <load-on-startup>1</load-on-startup> -->
+	<!-- </servlet> -->
+
 	
 	<!-- 为TestServlet配置 -->
 	<servlet>
