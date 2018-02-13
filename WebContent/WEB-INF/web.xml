@@ -113,6 +113,49 @@
 	<servlet-name>login</servlet-name>
 	<url-pattern>/02/2.10/ServletDemo/login</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 定义Filter:log -->
+	<filter>
+	<!-- Filter的名字 -->
+	<filter-name>log</filter-name>
+	<!-- Filter的实现类 -->
+	<filter-class>jee02Filter.LogFilter</filter-class>
+	</filter>
+	<!-- 定义Filter拦截的URI地址 -->
+	<filter-mapping>
+	<!-- Filter的名字 -->
+	<filter-name>log</filter-name>
+	<!-- Filter负责拦截的URI -->
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 定义Filter：authority -->
+	<filter>
+	<!-- Filter的名字 -->
+	<filter-name>authority</filter-name>
+	<!-- Filter的实现类 -->
+	<filter-class>jee02Filter.AuthorityFilter</filter-class>
+	<!-- 下面3个init-param元素配置了3个参数 -->
+	<init-param>
+	<param-name>encoding</param-name>
+	<param-value>utf-8</param-value>
+	</init-param>
+	<init-param>
+	<param-name>loginPage</param-name>
+	<param-value>/02/2.12/filterTest/login.jsp</param-value>
+	</init-param>
+	<init-param>
+	<param-name>proLogin</param-name>
+	<param-value>/02/2.12/filterTest/proLogin.jsp</param-value>
+	</init-param>
+	</filter>
+	<!-- 定义Filter拦截的URL地址 -->
+	<filter-mapping>
+	<!-- Filter的名字 -->
+	<filter-name>authority</filter-name>
+	<!-- Filter负责拦截的URL -->
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 </web-app>
 
