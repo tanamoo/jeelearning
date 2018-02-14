@@ -68,94 +68,101 @@
 	</servlet-mapping>
 
 	<!-- 为TimerServlet配置 -->
-	<!-- <servlet>-->
+	<!-- <servlet> -->
 	<!-- Servlet名 -->
-	<!--  <servlet-name>timeServlet</servlet-name> -->
+	<!-- <servlet-name>timeServlet</servlet-name> -->
 	<!-- Servlet实现类 -->
 	<!-- <servlet-class>jee02Servlet.TimerServlet</servlet-class> -->
 	<!-- 配置应用启动时，创建Servlet实例 -->
 	<!-- <load-on-startup>1</load-on-startup> -->
 	<!-- </servlet> -->
 
-	
+
 	<!-- 为TestServlet配置 -->
 	<servlet>
-	<servlet-name>testServlet</servlet-name>
-	<servlet-class>jee02Servlet.TestServlet</servlet-class>
-	<init-param>
-	<param-name>driver</param-name>
-	<param-value>com.mysql.jdbc.Driver</param-value>
-	</init-param>
-	<init-param>
-	<param-name>url</param-name>
-	<param-value>jdbc:mysql://localhost:3306/test</param-value>
-	</init-param>
-	<init-param>
-	<param-name>user</param-name>
-	<param-value>root</param-value>
-	</init-param>
-	<init-param>
-	<param-name>pass</param-name>
-	<param-value>yu328ting8MYS</param-value>
-	</init-param>
+		<servlet-name>testServlet</servlet-name>
+		<servlet-class>jee02Servlet.TestServlet</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/test</param-value>
+		</init-param>
+		<init-param>
+			<param-name>user</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pass</param-name>
+			<param-value>yu328ting8MYS</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
-	<servlet-name>testServlet</servlet-name>
-	<url-pattern>/02/2.10/ServletDemo/testServlet</url-pattern>
+		<servlet-name>testServlet</servlet-name>
+		<url-pattern>/02/2.10/ServletDemo/testServlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- 为LoginServlet配置 -->
 	<servlet>
-	<servlet-name>login</servlet-name>
-	<servlet-class>jee02Servlet.LoginServlet</servlet-class>
+		<servlet-name>login</servlet-name>
+		<servlet-class>jee02Servlet.LoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-	<servlet-name>login</servlet-name>
-	<url-pattern>/02/2.10/ServletDemo/login</url-pattern>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/02/2.10/ServletDemo/login</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- 定义Filter:log -->
 	<filter>
-	<!-- Filter的名字 -->
-	<filter-name>log</filter-name>
-	<!-- Filter的实现类 -->
-	<filter-class>jee02Filter.LogFilter</filter-class>
+		<!-- Filter的名字 -->
+		<filter-name>log</filter-name>
+		<!-- Filter的实现类 -->
+		<filter-class>jee02Filter.LogFilter</filter-class>
 	</filter>
 	<!-- 定义Filter拦截的URI地址 -->
 	<filter-mapping>
-	<!-- Filter的名字 -->
-	<filter-name>log</filter-name>
-	<!-- Filter负责拦截的URI -->
-	<url-pattern>/*</url-pattern>
+		<!-- Filter的名字 -->
+		<filter-name>log</filter-name>
+		<!-- Filter负责拦截的URI,为空不拦截起请求，为/*则拦截所有请求 -->
+		<url-pattern></url-pattern>
 	</filter-mapping>
-	
+
 	<!-- 定义Filter：authority -->
 	<filter>
-	<!-- Filter的名字 -->
-	<filter-name>authority</filter-name>
-	<!-- Filter的实现类 -->
-	<filter-class>jee02Filter.AuthorityFilter</filter-class>
-	<!-- 下面3个init-param元素配置了3个参数 -->
-	<init-param>
-	<param-name>encoding</param-name>
-	<param-value>utf-8</param-value>
-	</init-param>
-	<init-param>
-	<param-name>loginPage</param-name>
-	<param-value>/02/2.12/filterTest/login.jsp</param-value>
-	</init-param>
-	<init-param>
-	<param-name>proLogin</param-name>
-	<param-value>/02/2.12/filterTest/proLogin.jsp</param-value>
-	</init-param>
+		<!-- Filter的名字 -->
+		<filter-name>authority</filter-name>
+		<!-- Filter的实现类 -->
+		<filter-class>jee02Filter.AuthorityFilter</filter-class>
+		<!-- 下面3个init-param元素配置了3个参数 -->
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>loginPage</param-name>
+			<param-value>/02/2.12/filterTest/login.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>proLogin</param-name>
+			<param-value>/02/2.12/filterTest/proLogin.jsp</param-value>
+		</init-param>
 	</filter>
 	<!-- 定义Filter拦截的URL地址 -->
 	<filter-mapping>
-	<!-- Filter的名字 -->
-	<filter-name>authority</filter-name>
-	<!-- Filter负责拦截的URL -->
-	<url-pattern>/*</url-pattern>
+		<!-- Filter的名字 -->
+		<filter-name>authority</filter-name>
+		<!-- Filter负责拦截的URL,为空不拦截起请求，为/*则拦截所有请求 -->
+		<url-pattern></url-pattern>
 	</filter-mapping>
+	
+	
+	<!-- 为GetConnListener配置Listener -->
+	<!-- <listener> -->
+	<!-- 指定Listener的实现类 -->
+	<!-- <listener-class>jee02Listener.GetConnListener</listener-class> -->
+	<!-- </listener> -->
 
 </web-app>
 
