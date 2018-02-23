@@ -156,13 +156,52 @@
 		<!-- Filter负责拦截的URL,为空不拦截起请求，为/*则拦截所有请求 -->
 		<url-pattern></url-pattern>
 	</filter-mapping>
-	
-	
+
+
 	<!-- 为GetConnListener配置Listener -->
 	<!-- <listener> -->
 	<!-- 指定Listener的实现类 -->
 	<!-- <listener-class>jee02Listener.GetConnListener</listener-class> -->
 	<!-- </listener> -->
+
+	<!-- 2.14关于JSP的配置信息 -->
+	<jsp-config>
+		<jsp-property-group>
+			<!-- 对那些文件应用配置 -->
+			<url-pattern>/02/2.14/jsp2/noscript/*</url-pattern>
+			<!-- 忽略表达式语言 -->
+			<el-ignored>true</el-ignored>
+			<!-- 页面编码的字符集 -->
+			<page-encoding>utf-8</page-encoding>
+			<!-- 不允许使用Java脚本 -->
+			<scripting-invalid>true</scripting-invalid>
+			<!-- 隐式导入页面头 -->
+			<include-prelude>/02/2.14/jsp2/inc/top.jspf</include-prelude> 
+			<!-- 隐式导入页面尾 -->
+			<include-coda>/02/2.14/jsp2/inc/bottom.jspf</include-coda> 
+		</jsp-property-group>
+
+		<jsp-property-group>
+			<!-- 对哪些文件应用配置 -->
+			<url-pattern>/02/2.14/jsp2/*</url-pattern>
+			<!-- 允许使用表达式语言 -->
+			<el-ignored>false</el-ignored>
+			<page-encoding>utf-8</page-encoding>
+			<!-- 允许使用Java脚本 -->
+			<scripting-invalid>false</scripting-invalid>
+		</jsp-property-group>
+
+		<jsp-property-group>
+			<!-- 对哪些文件应用配置 -->
+			<url-pattern>/02/2.14/jsp2/inc/*</url-pattern>
+			<!-- 允许使用表达式语言 -->
+			<el-ignored>false</el-ignored>
+			<page-encoding>utf-8</page-encoding>
+			<!-- 不允许使用Java脚本 -->
+			<scripting-invalid>true</scripting-invalid>
+		</jsp-property-group>
+
+	</jsp-config>
 
 </web-app>
 

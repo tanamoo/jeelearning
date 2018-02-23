@@ -15,75 +15,95 @@
 		<!-- 定义标签体为空 -->
 		<body-content>empty</body-content>
 	</tag>
-	
+
 	<!-- 定义第二个标签 -->
 	<tag>
-	<!-- 定义标签名 -->
-	<name>query</name>
-	<!-- 定义标签处理类 -->
-	<tag-class>jee02Tag.QueryTag</tag-class>
-	<!-- 定义标签体为空 -->
-	<body-content>empty</body-content>
-	
-	<!-- 配置标签属性：driver -->
-	<attribute>
-	<name>driver</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
-	<!-- 配置标签属性:url -->
-	<attribute>
-	<name>url</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
-	<!-- 配置标签属性：user -->
-	<attribute>
-	<name>user</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
-	<!-- 配置标签属性：pass -->
-	<attribute>
-	<name>pass</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
-	<!-- 配置标签属性：sql -->
-	<attribute>
-	<name>sql</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
+		<!-- 定义标签名 -->
+		<name>query</name>
+		<!-- 定义标签处理类 -->
+		<tag-class>jee02Tag.QueryTag</tag-class>
+		<!-- 定义标签体为空 -->
+		<body-content>empty</body-content>
+
+		<!-- 配置标签属性：driver -->
+		<attribute>
+			<name>driver</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
+		<!-- 配置标签属性:url -->
+		<attribute>
+			<name>url</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
+		<!-- 配置标签属性：user -->
+		<attribute>
+			<name>user</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
+		<!-- 配置标签属性：pass -->
+		<attribute>
+			<name>pass</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
+		<!-- 配置标签属性：sql -->
+		<attribute>
+			<name>sql</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
 	</tag>
-	
+
 	<!-- 定义第三个标签 -->
 	<tag>
-	<!-- 定义标签名 -->
-	<name>iterator</name>
-	<!-- 定义标签处理类 -->
-	<tag-class>jee02Tag.IteratorTag</tag-class>
-	<!-- 定义标签体不允许出现JSP脚本 -->
-	<body-content>scriptless</body-content>
-	
-	<!-- 配置标签属性：collection -->
-	<attribute>
-	<name>collection</name>
-	<required>true</required>
-	<fragment>true</fragment>
-	</attribute>
-	
-	<!-- 配置标签属性：item -->
-    <attribute>
-    <name>item</name>
-    <required>true</required>
-    <fragment>true</fragment>
-    </attribute>
+		<!-- 定义标签名 -->
+		<name>iterator</name>
+		<!-- 定义标签处理类 -->
+		<tag-class>jee02Tag.IteratorTag</tag-class>
+		<!-- 定义标签体不允许出现JSP脚本 -->
+		<body-content>scriptless</body-content>
+
+		<!-- 配置标签属性：collection -->
+		<attribute>
+			<name>collection</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+
+		<!-- 配置标签属性：item -->
+		<attribute>
+			<name>item</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
 	</tag>
+
+	<!-- 2.14 定义第一个函数 -->
+	<function>
+		<!-- 定义函数名：reverse -->
+		<name>reverse</name>
+		<!-- 定义函数的处理类 -->
+		<function-class>jee02JSP2.Functions</function-class>
+		<!-- 定义函数的实现方法 -->
+		<function-signature>java.lang.String reverse(java.lang.String)</function-signature>
+	</function>
+
+	<!-- 2.14 定义第二个函数：countChar -->
+	<function>
+		<!-- 定义函数名：countChar -->
+		<name>countChar</name>
+		<!-- 定义函数处理类 -->
+		<function-class>jee02JSP2.Functions</function-class>
+		<!-- 定义函数的实现方法 -->
+		<function-signature>int countChar(java.lang.String)</function-signature>
+	</function>
 
 </taglib>
